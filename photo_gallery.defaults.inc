@@ -1,13 +1,13 @@
 <?php
 
 /**
- * Implementation of hook_content_default_fields().
+ * Helper to implementation of hook_content_default_fields().
  */
-function photo_gallery_content_default_fields() {
+function _photo_gallery_content_default_fields() {
   $fields = array();
 
   // Exported field: field_gallery_desc
-  $fields['gallery-field_gallery_desc'] = array(
+  $fields[] = array(
     'field_name' => 'field_gallery_desc',
     'type_name' => 'gallery',
     'display_settings' => array(
@@ -55,7 +55,7 @@ function photo_gallery_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Description',
-      'weight' => '-4',
+      'weight' => '7',
       'description' => 'Enter a description for the gallery.',
       'type' => 'text_textarea',
       'module' => 'text',
@@ -63,7 +63,7 @@ function photo_gallery_content_default_fields() {
   );
 
   // Exported field: field_gallery_reference
-  $fields['gallery-field_gallery_reference'] = array(
+  $fields[] = array(
     'field_name' => 'field_gallery_reference',
     'type_name' => 'gallery',
     'display_settings' => array(
@@ -96,25 +96,11 @@ function photo_gallery_content_default_fields() {
     'module' => 'nodereference',
     'active' => '1',
     'referenceable_types' => array(
+      'book' => 'book',
       'page' => 'page',
-      'announcements' => 0,
-      'calendar_event' => 0,
-      'community' => 0,
-      'community_links' => 0,
-      'community_page_story' => 0,
-      'employee' => 0,
-      'extension_page' => 0,
       'gallery' => 0,
-      'group' => 0,
-      'header_top_link' => 0,
-      'home_slideshow' => 0,
-      'latest_news_feed' => 0,
-      'letterhead' => 0,
-      'news_feed_item' => 0,
-      'publication' => 0,
-      'social_media' => 0,
-      'extension_story' => 0,
-      'webform' => 0,
+      'story' => 0,
+      'photo' => FALSE,
     ),
     'advanced_view' => '--',
     'advanced_view_args' => '',
@@ -128,7 +114,7 @@ function photo_gallery_content_default_fields() {
       ),
       'default_value_php' => NULL,
       'label' => 'Page to include slideshow',
-      'weight' => '-2',
+      'weight' => '8',
       'description' => 'Select a page to have the gallery photos displayed in a slideshow.',
       'type' => 'nodereference_select',
       'module' => 'nodereference',
@@ -136,7 +122,7 @@ function photo_gallery_content_default_fields() {
   );
 
   // Exported field: field_pictures
-  $fields['gallery-field_pictures'] = array(
+  $fields[] = array(
     'field_name' => 'field_pictures',
     'type_name' => 'gallery',
     'display_settings' => array(
@@ -201,18 +187,8 @@ function photo_gallery_content_default_fields() {
         'fid' => '34',
       ),
       'use_default_image' => 1,
-      'filefield_sources' => array(
-        'imce' => FALSE,
-        'remote' => FALSE,
-        'reference' => FALSE,
-        'attach' => FALSE,
-      ),
-      'filefield_source_autocomplete' => '0',
-      'filefield_source_attach_path' => 'file_attach',
-      'filefield_source_attach_absolute' => 0,
-      'filefield_source_attach_mode' => 'move',
       'label' => 'Pictures',
-      'weight' => '-3',
+      'weight' => '9',
       'description' => '',
       'type' => 'imagefield_widget',
       'module' => 'imagefield',
@@ -220,10 +196,91 @@ function photo_gallery_content_default_fields() {
   );
 
   // Translatables
-  // Included for use with string extractors like potx.
-  t('Description');
-  t('Page to include slideshow');
-  t('Pictures');
+  array(
+    t('Description'),
+    t('Page to include slideshow'),
+    t('Pictures'),
+  );
 
   return $fields;
+}
+
+/**
+ * Helper to implementation of hook_imagecache_default_presets().
+ */
+function _photo_gallery_imagecache_default_presets() {
+  $items = array(
+    'gallery-preview' => array(
+      'presetname' => 'gallery-preview',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '230',
+            'height' => '170',
+            'upscale' => 0,
+          ),
+        ),
+      ),
+    ),
+    'gallery-slideshow' => array(
+      'presetname' => 'gallery-slideshow',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '800',
+            'height' => '600',
+            'upscale' => 0,
+          ),
+        ),
+      ),
+    ),
+    'gallery-thumbnail' => array(
+      'presetname' => 'gallery-thumbnail',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '150',
+            'height' => '',
+            'upscale' => 0,
+          ),
+        ),
+        '1' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_crop',
+          'data' => array(
+            'width' => '150',
+            'height' => '110',
+            'xoffset' => 'center',
+            'yoffset' => 'center',
+          ),
+        ),
+      ),
+    ),
+    'slideshow-250' => array(
+      'presetname' => 'slideshow-250',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '250',
+            'height' => '174',
+            'upscale' => 0,
+          ),
+        ),
+      ),
+    ),
+  );
+  return $items;
 }

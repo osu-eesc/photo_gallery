@@ -23,8 +23,8 @@ function photo_gallery_imagecache_default_presets() {
           'module' => 'imagecache',
           'action' => 'imagecache_scale',
           'data' => array(
-            'width' => '230',
-            'height' => '170',
+            'width' => '160',
+            'height' => '118',
             'upscale' => 0,
           ),
         ),

@@ -75,15 +75,17 @@ function photo_gallery_strongarm() {
   $strongarm->name = 'content_extra_weights_gallery';
   $strongarm->value = array(
     'title' => '-5',
-    'revision_information' => '2',
+    'revision_information' => '4',
     'author' => '3',
-    'options' => '5',
-    'menu' => '4',
-    'book' => '1',
+    'options' => '1',
+    'comment_settings' => '9',
+    'menu' => '2',
+    'book' => '5',
     'path' => '7',
     'path_redirect' => '6',
     'gallery_photos_node_content_2' => '0',
     'gallery_photos_node_content_1' => '-1',
+    'xmlsitemap' => '8',
   );
   $export['content_extra_weights_gallery'] = $strongarm;
 

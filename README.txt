@@ -5,6 +5,7 @@ description = "Displays a list of galleries and slideshows and allows you to add
 core = "6.x"
 dependencies[] = "features"
 dependencies[] = "filefield"
+dependencies[] = "filefield_sources"
 dependencies[] = "imageapi"
 dependencies[] = "imageapi_gd"
 dependencies[] = "imagecache"

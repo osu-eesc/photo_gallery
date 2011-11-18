@@ -9,8 +9,6 @@
   float: left;
   padding-right: 10px;
 }
-
-html#html-alpha.js body#pid-gallery-forestry-slideshow.not-front div#page.page div#page-inner.page-inner div#content-wrapper.page-sidebar-last div#main-wrapper.main-wrapper div#main.main div#main-inner.main-inner div#main-group.main-group div#main-group-inner.main-group-inner div#main-content.main-content div#main-content-inner.main-content-inner div#content-group.content-group div#content-group-inner.content-group-inner div#content-region.content-region div#content-region-inner.content-region-inner div#content-inner.content-inner div#content-inner-inner.content-inner-inner div#content-content.content-content div#node-3336 div.node-inner div.content div.view div.view-content table.views-view-grid tbody tr.row-1 td.col-2 div.views-field-field-pictures-data span.field-content div.caption
 	
 /****************************Individual Galleries****************************/
 
@@ -19,7 +17,7 @@ html#html-alpha.js body#pid-gallery-forestry-slideshow.not-front div#page.page d
 }
 
 .view-gallery-photos table.views-view-grid td {
-
+  width: 195px;
   vertical-align: top;
   text-align: center;
   padding: 0;

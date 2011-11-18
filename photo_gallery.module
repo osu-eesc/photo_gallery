@@ -1,0 +1,29 @@
+<?php
+
+include_once('photo_gallery.features.inc');
+
+/**
+ * Implementation of hook_init().
+ */
+function photo_gallery_init() {
+  drupal_add_css(drupal_get_path('module', 'photo_gallery') .'/theme/photo-gallery.css');
+}
+
+/**
+ * Implementation of hook_theme().
+ */
+ 
+function photo_gallery_preprocess_node(&$variables) {
+  if ($variables['node']->type == 'gallery') {
+    $variables['template_file'] = 'gallery';
+  }
+}
+
+
+/**
+ * Implementation of hook_theme_registry_alter().
+ */
+function photo_gallery_theme_registry_alter(&$theme_registry) {
+  $modulepath = drupal_get_path('module', 'photo_gallery') . '/theme';
+  array_unshift($theme_registry[node]['theme paths'], $modulepath);
+}

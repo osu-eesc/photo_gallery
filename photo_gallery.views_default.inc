@@ -336,7 +336,7 @@ function photo_gallery_views_default_views() {
     'weight' => 0,
     'name' => 'navigation',
   ));
-  $handler = $view->new_display('block', 'page-slideshow', 'block_1');
+  $handler = $view->new_display('block', 'mini-slideshow', 'block_1');
   $handler->override_option('fields', array(
     'edit_node' => array(
       'label' => '',

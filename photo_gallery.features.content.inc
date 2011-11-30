@@ -11,7 +11,7 @@ function photo_gallery_content_default_fields() {
     'field_name' => 'field_gallery_desc',
     'type_name' => 'gallery',
     'display_settings' => array(
-      'weight' => '7',
+      'weight' => '-4',
       'parent' => '',
       'label' => array(
         'format' => 'hidden',
@@ -67,14 +67,14 @@ function photo_gallery_content_default_fields() {
     'field_name' => 'field_gallery_reference',
     'type_name' => 'gallery',
     'display_settings' => array(
-      'weight' => '9',
+      'weight' => '-2',
       'parent' => '',
       'label' => array(
         'format' => 'hidden',
       ),
       'teaser' => array(
         'format' => 'hidden',
-        'exclude' => 0,
+        'exclude' => 1,
       ),
       'full' => array(
         'format' => 'hidden',
@@ -140,18 +140,18 @@ function photo_gallery_content_default_fields() {
     'field_name' => 'field_pictures',
     'type_name' => 'gallery',
     'display_settings' => array(
-      'weight' => '8',
+      'weight' => '-3',
       'parent' => '',
       'label' => array(
-        'format' => 'above',
+        'format' => 'hidden',
       ),
       'teaser' => array(
-        'format' => 'image_plain',
-        'exclude' => 0,
+        'format' => 'galleryformatter_default',
+        'exclude' => 1,
       ),
       'full' => array(
-        'format' => 'image_plain',
-        'exclude' => 1,
+        'format' => 'galleryformatter_default',
+        'exclude' => 0,
       ),
       '5' => array(
         'format' => 'image_plain',
@@ -207,10 +207,10 @@ function photo_gallery_content_default_fields() {
         'reference' => 0,
         'attach' => 0,
       ),
+      'filefield_source_autocomplete' => '0',
       'filefield_source_attach_path' => 'file_attach',
       'filefield_source_attach_absolute' => '0',
       'filefield_source_attach_mode' => 'move',
-      'filefield_source_autocomplete' => '0',
       'insert' => 0,
       'insert_styles' => array(
         'auto' => 0,
@@ -412,6 +412,12 @@ function photo_gallery_content_default_fields() {
       'insert_default' => 'auto',
       'insert_class' => '',
       'insert_width' => '',
+      'slide_preset' => 'galleryformatter_slide',
+      'thumb_preset' => 'galleryformatter_thumb',
+      'style' => 'Greenarrows',
+      'link_to_full' => 1,
+      'link_to_full_preset' => 'preview_500',
+      'modal' => 'lightbox2',
       'label' => 'Pictures',
       'weight' => '-3',
       'description' => '',

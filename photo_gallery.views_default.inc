@@ -581,23 +581,6 @@ function photo_gallery_views_default_views() {
   ));
   $handler->override_option('block_description', '');
   $handler->override_option('block_caching', -1);
-  $handler = $view->new_display('node_content', 'Gallery', 'node_content_1');
-  $handler->override_option('header', ' <div class="gallery-slideshow">Click any image to view in slideshow.</div>');
-  $handler->override_option('style_plugin', 'grid');
-  $handler->override_option('style_options', array(
-    'grouping' => '',
-    'columns' => '3',
-    'alignment' => 'horizontal',
-    'fill_single_line' => 1,
-  ));
-  $handler->override_option('types', array(
-    'gallery' => 'gallery',
-  ));
-  $handler->override_option('modes', array(
-    '0' => 'full',
-  ));
-  $handler->override_option('argument_mode', 'nid');
-  $handler->override_option('default_argument', '');
 
   $views[$view->name] = $view;
 

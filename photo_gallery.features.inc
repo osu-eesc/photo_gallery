@@ -79,9 +79,32 @@ function photo_gallery_imagecache_default_presets() {
           'module' => 'imagecache',
           'action' => 'imagecache_scale',
           'data' => array(
-            'width' => '220',
-            'height' => '153',
-            'upscale' => 0,
+            'width' => '100%',
+            'height' => '165',
+            'upscale' => 1,
+          ),
+        ),
+        '1' => array(
+          'weight' => '0',
+          'module' => 'imagecache_canvasactions',
+          'action' => 'canvasactions_definecanvas',
+          'data' => array(
+            'RGB' => array(
+              'HEX' => 'F1F1F1',
+            ),
+            'under' => 1,
+            'exact' => array(
+              'width' => '220',
+              'height' => '165',
+              'xpos' => 'center',
+              'ypos' => 'center',
+            ),
+            'relative' => array(
+              'leftdiff' => '',
+              'rightdiff' => '',
+              'topdiff' => '',
+              'bottomdiff' => '',
+            ),
           ),
         ),
       ),

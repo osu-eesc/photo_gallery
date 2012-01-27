@@ -13,6 +13,10 @@ function photo_gallery_content_default_fields() {
     'display_settings' => array(
       'weight' => '-4',
       'parent' => '',
+      '5' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
       'label' => array(
         'format' => 'hidden',
       ),
@@ -69,6 +73,10 @@ function photo_gallery_content_default_fields() {
     'display_settings' => array(
       'weight' => '-2',
       'parent' => '',
+      '5' => array(
+        'format' => 'hidden',
+        'exclude' => 1,
+      ),
       'label' => array(
         'format' => 'hidden',
       ),
@@ -142,6 +150,10 @@ function photo_gallery_content_default_fields() {
     'display_settings' => array(
       'weight' => '-3',
       'parent' => '',
+      '5' => array(
+        'format' => 'slideshow-220_default',
+        'exclude' => 0,
+      ),
       'label' => array(
         'format' => 'hidden',
       ),
@@ -151,10 +163,6 @@ function photo_gallery_content_default_fields() {
       ),
       'full' => array(
         'format' => 'galleryformatter_default',
-        'exclude' => 0,
-      ),
-      '5' => array(
-        'format' => 'image_plain',
         'exclude' => 0,
       ),
       '4' => array(

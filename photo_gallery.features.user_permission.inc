@@ -63,5 +63,11 @@ function photo_gallery_user_default_permissions() {
     ),
   );
 
+  // Exported permission: view imagecache mini-slideshow_220
+  $permissions['view imagecache mini-slideshow_220'] = array(
+    'name' => 'view imagecache mini-slideshow_220',
+    'roles' => array(),
+  );
+
   return $permissions;
 }

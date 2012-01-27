@@ -11,10 +11,9 @@ function photo_gallery_views_default_views() {
   $view->name = 'gallery_photos';
   $view->description = 'Photos belonging to a particular gallery';
   $view->tag = 'gallery';
-  $view->view_php = '';
   $view->base_table = 'node';
-  $view->is_cacheable = FALSE;
-  $view->api_version = 2;
+  $view->core = 0;
+  $view->api_version = '2';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
   $handler = $view->new_display('default', 'Defaults', 'default');
   $handler->override_option('fields', array(
@@ -111,7 +110,7 @@ function photo_gallery_views_default_views() {
       'field' => 'nid',
       'validate_user_argument_type' => 'uid',
       'validate_user_roles' => array(
-        '2' => 0,
+        2 => 0,
       ),
       'relationship' => 'none',
       'default_options_div_prefix' => '',
@@ -253,7 +252,7 @@ function photo_gallery_views_default_views() {
     'gallery' => 'gallery',
   ));
   $handler->override_option('modes', array(
-    '0' => 'teaser',
+    0 => 'teaser',
   ));
   $handler->override_option('argument_mode', 'nid');
   $handler->override_option('default_argument', 'nid');
@@ -342,7 +341,7 @@ function photo_gallery_views_default_views() {
       'label' => '',
       'alter' => array(
         'alter_text' => 1,
-        'text' => '<div class="edit-link">[edit_node] </div>',
+        'text' => '<span class="edit-link">[edit_node]</span>',
         'make_link' => 0,
         'path' => '',
         'link_class' => '',
@@ -378,8 +377,10 @@ function photo_gallery_views_default_views() {
         'text' => '',
         'make_link' => 0,
         'path' => '',
+        'absolute' => 0,
         'link_class' => '',
         'alt' => '',
+        'rel' => '',
         'prefix' => '',
         'suffix' => '',
         'target' => '',
@@ -394,9 +395,10 @@ function photo_gallery_views_default_views() {
       'empty' => '',
       'hide_empty' => 0,
       'empty_zero' => 0,
+      'hide_alter_empty' => 1,
       'link_to_node' => 0,
       'label_type' => 'none',
-      'format' => 'slideshow-220_default',
+      'format' => 'slideshow-220_linked',
       'multiple' => array(
         'group' => 0,
         'multiple_number' => '',
@@ -404,7 +406,6 @@ function photo_gallery_views_default_views() {
         'multiple_reversed' => 0,
       ),
       'exclude' => 0,
-      'hide_alter_empty' => 1,
       'id' => 'field_pictures_fid',
       'table' => 'node_data_field_pictures',
       'field' => 'field_pictures_fid',
@@ -417,7 +418,7 @@ function photo_gallery_views_default_views() {
       'label' => '',
       'alter' => array(
         'alter_text' => 1,
-        'text' => '<div class="caption">[field_pictures_data]</div>',
+        'text' => '<span class="caption">[field_pictures_data]</span>',
         'make_link' => 0,
         'path' => '',
         'link_class' => '',
@@ -465,10 +466,10 @@ function photo_gallery_views_default_views() {
       'field' => 'field_gallery_reference_nid',
       'validate_user_argument_type' => 'uid',
       'validate_user_roles' => array(
-        '2' => 0,
-        '5' => 0,
-        '4' => 0,
-        '3' => 0,
+        2 => 0,
+        5 => 0,
+        4 => 0,
+        3 => 0,
       ),
       'override' => array(
         'button' => 'Use default',
@@ -496,8 +497,8 @@ function photo_gallery_views_default_views() {
       'validate_argument_node_access' => 0,
       'validate_argument_nid_type' => 'nid',
       'validate_argument_vocabulary' => array(
-        '2' => 0,
-        '1' => 0,
+        2 => 0,
+        1 => 0,
       ),
       'validate_argument_type' => 'tid',
       'validate_argument_transform' => 0,

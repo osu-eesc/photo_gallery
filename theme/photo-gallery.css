@@ -11,9 +11,6 @@
 }
 	
 /****************************Individual Galleries****************************/
-.views-field-field-pictures-data {
-  margin-bottom: 10px;
-}
 
 .views-field-field-pictures-fid {
  margin-top: -5px;
@@ -21,30 +18,17 @@
 	
 .views_slideshow_singleframe_main {
   background-color: #F1F1F1 !important;
-   border: 1px solid #C8C8C8 !important;
-   padding: 5px !important;
+  border: 1px solid #C8C8C8 !important;
+  padding: 5px !important;
+  width: 100%;
 }
 
 .views_slideshow_singleframe_teaser_section {
   background-color: #F1F1F1;
-}
-	
-.view-gallery-photos .views-field-field-pictures-fid img {
- /* background-color: #F1F1F1 !important; */
-  border: 1px solid #C8C8C8 !important;
-  top: 0 !important;
   margin: 0 !important;
   padding: 0 !important;
 }
-
-.view-gallery-photos .view-header {
-  text-align: left;
-  color: #424143;
-  font-family: Georgia,"Times New Roman",Times,serif;
-  font-size: 1em;
-  font-style: italic;
-}
-
+	
 .view-gallery-photos .caption {
   font-size: 95%;
   text-align: left;

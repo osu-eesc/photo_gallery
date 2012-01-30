@@ -19,6 +19,7 @@
 .views_slideshow_singleframe_main {
   background-color: #F1F1F1 !important;
   border: 1px solid #C8C8C8 !important;
+  margin-top: 0 !important;
   padding: 5px !important;
   width: 100%;
 }

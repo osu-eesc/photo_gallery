@@ -63,5 +63,41 @@ function photo_gallery_user_default_permissions() {
     ),
   );
 
+  // Exported permission: view imagecache galleryformatter_slide
+  $permissions['view imagecache galleryformatter_slide'] = array(
+    'name' => 'view imagecache galleryformatter_slide',
+    'roles' => array(
+      '0' => 'administrator',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
+      '3' => 'content editor',
+      '4' => 'site manager',
+    ),
+  );
+
+  // Exported permission: view imagecache galleryformatter_thumb
+  $permissions['view imagecache galleryformatter_thumb'] = array(
+    'name' => 'view imagecache galleryformatter_thumb',
+    'roles' => array(
+      '0' => 'administrator',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
+      '3' => 'content editor',
+      '4' => 'site manager',
+    ),
+  );
+
+  // Exported permission: view imagecache slideshow-220
+  $permissions['view imagecache slideshow-220'] = array(
+    'name' => 'view imagecache slideshow-220',
+    'roles' => array(
+      '0' => 'administrator',
+      '1' => 'anonymous user',
+      '2' => 'authenticated user',
+      '3' => 'content editor',
+      '4' => 'site manager',
+    ),
+  );
+
   return $permissions;
 }

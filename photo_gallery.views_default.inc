@@ -398,7 +398,7 @@ function photo_gallery_views_default_views() {
       'hide_alter_empty' => 1,
       'link_to_node' => 0,
       'label_type' => 'none',
-      'format' => 'slideshow-220_linked',
+      'format' => 'slideshow-220',
       'multiple' => array(
         'group' => 0,
         'multiple_number' => '',

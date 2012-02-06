@@ -192,7 +192,7 @@ function photo_gallery_content_default_fields() {
       'max_resolution' => '0',
       'min_resolution' => '0',
       'alt' => 'slideshow image',
-      'custom_alt' => 0,
+      'custom_alt' => 1,
       'title' => '',
       'custom_title' => 0,
       'title_type' => 'textfield',

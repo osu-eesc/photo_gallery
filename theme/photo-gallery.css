@@ -20,8 +20,9 @@
   background-color: #F1F1F1 !important;
   border: 1px solid #C8C8C8 !important;
   margin-top: 0 !important;
+  margin-bottom: 15px !important;
   padding: 5px !important;
-  width: 100%;
+  width: 220px;
 }
 
 .views_slideshow_singleframe_teaser_section {
